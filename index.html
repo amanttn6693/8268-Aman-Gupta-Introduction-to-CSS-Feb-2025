@@ -5,15 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 480px)" href="styles.css">
 </head>
 
 <body>
     <header>
-        <img class="center" alt="logo" src="https://www.tothenew.com/blog/wp-content/themes/ttn/images/social-logo.png">
+        <div class="mobile-top"><img class="center" alt="logo"
+                src="https://www.tothenew.com/blog/wp-content/themes/ttn/images/social-logo.png">
+
+        
         <hr>
-        <nav>
-            <ul>
+        <nav class="menu">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <div class="hamburger-container"><img class="hamburger" alt="hamburger"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/170px-Hamburger_icon.svg.png">
+                </div>
+            </label>
+            <ul class="nav-mobile">
                 <li><a href="#">Home</a></li>
                 <li><a class="golden" href="#">Single Posts</a>
                     <ul>
@@ -32,6 +43,7 @@
                 <li><a href="#">Features</a></li>
             </ul>
         </nav>
+    </div>
     </header>
     <section class="picture">
         <img id="content" alt="content" src="https://live.staticflickr.com/3771/11938517036_c4c596ca28_3k.jpg">

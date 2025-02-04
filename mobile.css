@@ -1,56 +1,58 @@
 .center {
     display: block;
-    margin:auto;
+    width: 100px;
 }
-
+.hamburger{
+    width: 30px;
+    cursor: pointer;
+}
+.mobile-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .golden{
     color : gold;
 }
-hr{
-    margin:0;
-}
-
-#check,.checkbtn{
+header>hr{
     display: none;
 }
-nav > ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
+
+.nav-mobile{
+    display: none;
 }
-nav > ul > li{
-    margin: 0 15px;
+input[type="checkbox"]  {
+    display: none;
+ }
+#check:checked ~ .nav-mobile {
+    display: block;
+   }
+
+nav ul {
+    position: absolute;
+    right: 0%;
+    list-style-type: none;
+    padding: 0;
+    background-color: white;
 }
 
-nav ul li a{
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
     text-decoration: none;
     color: black;
 }
 
-nav ul li:hover ul {
-    display: block;
-}
 
-nav ul li ul {
+nav ul ul {
     display: none;
-    position: absolute;
-    background: white;
-    list-style: none;
-    padding: 10px 0;
+    padding-left: 20px;
 }
 
-nav ul li:hover ul {
+nav ul li:hover > ul {
     display: block;
-}
-
-nav ul li ul li {
-    padding-bottom: 10px;
-}
-
-nav ul li ul li a {
-    color: #000;
 }
 
 #content{
@@ -66,7 +68,7 @@ form{
 }
 .picture{
     position: relative;
-    z-index: -1;
+    z-index: -1
 }
 .Contact{
     position: absolute;
@@ -86,13 +88,13 @@ form{
 
 .content{
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     padding: 0px 12.5%;
 }
 .data{
     padding-bottom: 40px;
-    padding-right: 5%;
 }
 
 label{
@@ -126,7 +128,6 @@ button:hover {
 }
 
 .about,.socialmedia{
-    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -134,26 +135,12 @@ button:hover {
     text-align: center;
     padding:20px 10px;
     border: 1px solid black;
-    margin: 5%;
+    margin-bottom: 40px;
 }
 
 .event{
     width: 300px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 footer {
     padding: 10px 0px 0px 0px;
@@ -163,8 +150,10 @@ footer {
 }
 .sub-1{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     text-align: left;
+    padding: 0 12.5%;
 }
 
 section > ul{
@@ -182,14 +171,15 @@ section > ul > li{
 
 .sub-2{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: flex-start;
     padding: 0 12.5%;
 }
 
 .sub-2 > ul{
+    padding: 0px;
     list-style: none;
     display: flex;
-    justify-content: space-between;
 }
 
 .sub-2 > ul li a{
